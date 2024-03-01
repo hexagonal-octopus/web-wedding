@@ -1,0 +1,251 @@
+{% extends "layouts/_default-layout.njk" %}
+{% set BASE_HREF = "./" %}
+{% set BASE_TITLE = "Wedding of Mickie and Arta" %}
+
+{% block vendor_styles %}
+<link rel="stylesheet" href="{{BASE_HREF}}assets/styles/vendor/owl.carousel/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="{{BASE_HREF}}assets/styles/vendor/lightbox2/css/lightbox.css" />
+{% endblock %}
+
+{% block additional_styles %}
+<link rel="stylesheet" href="{{BASE_HREF}}assets/styles/mickiearta.css" />
+{% endblock %}
+
+{% block vendor_scripts %}
+<script src="{{BASE_HREF}}assets/scripts/vendor/jquery.nicescroll/jquery.nicescroll.min.js" ></script>
+<script src="{{BASE_HREF}}assets/scripts/vendor/owl.carousel/owl.carousel.min.js" ></script>
+<script src="{{BASE_HREF}}assets/scripts/vendor/masonry-layout/masonry.pkgd.js" ></script>
+<script src="{{BASE_HREF}}assets/scripts/vendor/waypoints/lib/jquery.waypoints.js" ></script>
+<script src="{{BASE_HREF}}assets/scripts/vendor/jquery.stellar/jquery.stellar.js" ></script>
+<script src="{{BASE_HREF}}assets/scripts/vendor/lightbox2/js/lightbox.min.js" ></script>
+{% endblock %}
+
+{% block main %}
+<header class="header">
+   <nav>
+      <div class="navbar">
+         <div class="navbar_wrapper display-flex align-items-center">
+            <div class="navbar_logo">
+               <a href="./" title="Mickie Arta Wedding">
+                  <img src="{{BASE_HREF}}assets/images/mickiearta/img-logo-kita.png" alt="Mickie Arta wedding" class="img-responsive">
+               </a>
+            </div>
+            <div class="navbar_menu ml-auto" id="navbarMenu">
+               <ul class="navbar_lists">
+                  <li><a href="#countdown" class="navbar__link">The Countdown</a></li>
+                  <li><a href="#events" class="navbar__link">Holy Matrimony &amp; Party</a></li>
+                  <li><a href="#galleries" class="navbar__link">Galleries</a></li>
+                  <li><a href="#smallWishes" class="navbar__link">Our Small Wishes</a></li>
+               </ul>
+               <button type="button" class="button button--icon navbar__close-button" data-dismiss="navigation"><span class="icon icon--close"></span></button>
+            </div>
+            <button type="button" class="button button--icon navbar__menu-button ml-auto" data-toggle="navigation" data-target="#navbarMenu"><span class="icon icon--menu"></span></button>
+         </div>
+      </div>
+   </nav>
+   <div id="home" class="slides">
+      <div class="slides_wrapper">
+         <div class="slides_item slides_item-1"></div>
+         <div class="slides_item slides_item-2"></div>
+         <div class="slides_item slides_item-3"></div>
+         <div class="slides_item slides_item-4"></div>
+         <div class="slides_item slides_item-5"></div>
+      </div>
+      <div class="slides_layer">
+         <div class="container">
+            <div class="slides_text">
+               <h1>We're Getting Married</h1>
+               <p>Please save the date for the marriage celebration of <strong>Mickie</strong> and <strong>Arta</strong> on January 19th, 2019 in Bekasi, West Java. Invitation to follow</p>
+               <span class="slides_label">Introductory</span>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>
+<div class="leaves">
+   <div class="leaves_item leaves_item--top"></div>
+</div>
+<div class="wrapper">
+   <div class="wrapper__content">
+      <div class="leaves">
+         <div class="leaves_item leaves_item--left01" data-stellar-ratio="2" data-stellar-vertical-offset="130"></div>
+         <div class="leaves_item leaves_item--left02" data-stellar-ratio="1.3" data-stellar-vertical-offset="100"></div>
+         <div class="leaves_item leaves_item--left03" data-stellar-ratio="1.5" data-stellar-vertical-offset="130"></div>
+         <div class="leaves_item leaves_item--left04" data-stellar-ratio="1.7" data-stellar-vertical-offset="100"></div>
+         <div class="leaves_item leaves_item--right01" data-stellar-ratio="1.5" data-stellar-vertical-offset="130"></div>
+         <div class="leaves_item leaves_item--right02" data-stellar-ratio="2" data-stellar-vertical-offset="100"></div>
+         <div class="leaves_item leaves_item--right03" data-stellar-ratio="1.3" data-stellar-vertical-offset="10"></div>
+         <div class="leaves_item leaves_item--right04" data-stellar-ratio="1.8" data-stellar-vertical-offset="130"></div>
+      </div>
+      <div class="section__wrapper">
+         <section id="countdown" class="section section--foldtop section--yspace position-relative">
+            <div class="container">
+               <div class="text-center mb-5 pb-5">
+                  <p class="section_label">Count the day</p>
+                  <div id="countDate" class="count">
+                     <div class="count_unit days" data-unit="days">20</div>
+                     <div class="count_unit hours" data-unit="hours">5</div>
+                     <div class="count_unit minutes" data-unit="minutes">50</div>
+                     <div class="count_unit seconds" data-unit="seconds">30</div>
+                  </div>
+                  <h6 class="section_subline text-center">We're using Indonesia Western Standard Time (UTC+7)</h6>
+               </div>
+               <div class="leaves">
+                  <span class="leaves_item leaves_item--01"></span>
+                  <span class="leaves_item leaves_item--02"></span>
+                  <span class="leaves_item leaves_item--03"></span>
+               </div>
+            </div>
+            <div class="text-center py-5">
+               <div class="container">
+                  <h4 class="section_lead">1 Corinthians 13:7-8</h4>
+                  <p class="section_sublead">Love knows no limit to its endurance no end to its trust,<br>Love still stands when all else has fallen.</p>
+               </div>
+            </div>
+         </section>
+         <section class="section section--diagonal-red position-relative">
+            <div class="container">
+               <div class="images images--stacked">
+                  <div class="images_item">
+                     <img alt="Stacked" src="{{BASE_HREF}}assets/images/mickiearta/img-gallery-2.jpg" />
+                  </div>
+                  <div class="images_item">
+                     <img alt="Stacked" src="{{BASE_HREF}}assets/images/mickiearta/img-gallery-1.jpg" />
+                  </div>
+                  <div class="images_ornament">
+                     <img alt="Leaf Ornament" src="{{BASE_HREF}}assets/images/mickiearta/img-leaf-5.png" />
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="section section--foldbottom">
+            <div class="container" id="events">
+               <div class="row">
+                  <div class="col-1of2 ml-auto">
+                     <div class="section_feature">
+                        <span class="section_icon section_icon--church"></span>
+                        <div class="section_group">
+                           <h6 class="section_subline">Holy Matrimony</h6>
+                           <h2 class="section_headline">GKI Harapan Indah</h2>
+                           <div class="section_text">
+                              <p>Saturday, January 19th of 2019<br>10AM - 12AM</p>
+                              <p>GKI Harapan Indah<br>Jl. Taman Kenanga Blok HA No 4 - 5<br>Kota Harapan Indah, Bekasi</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div><!-- /.row -->
+               <div class="row position-relative" style="z-index: 2">
+                  <div class="col-1of2">
+                     <div class="section_feature pt-5">
+                        <span class="section_icon section_icon--party"></span>
+                        <div class="section_group">
+                           <h6 class="section_subline">Wedding Reception</h6>
+                           <h2 class="section_headline">Rhema Convention Hall</h2>
+                           <div class="section_text">
+                              <p>Saturday, January 19th of 2019<br>07 PM - 09 pM</p>
+                              <p>Rhema Building<br>Jl. KH Noer Ali, Komplek Ruko Duta Permai<br>Kalimalang, Bekasi</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-1of2">
+                     <div class="section_image section_image--medium-right">
+                        <img  src="{{BASE_HREF}}assets/images/mickiearta/img-feature-3.jpg" alt="Mickie &amp; Arta Wedding" class="img-responsive" />
+                     </div>
+                  </div>
+                  <div class="button_offset-center">
+                     <a href="https://www.google.com/maps/d/u/0/viewer?mid=1XQ5VZc3mp6OC_mJRrIiYlgVzLHXfWCxy&ll=-6.213445431553502%2C106.97569569999996&z=14" target="_blank" class="button button--gold" title="View on Map">View on Map</a>
+                  </div>
+               </div><!-- /.row -->
+            </div>
+         </section>
+         <section class="section section--yspace section--diagonal-grey" id="galleries">
+            <div class="container">
+               <div class="section_hgroup text-center mb-4">
+                  <h5 class="section_subline">Photo Gallery</h5>
+                  <h2 class="section_headline">Our Precious Moments</h2>
+               </div>
+               <div class="gallery">
+                  <div class="lists lists--grid">
+                     <div class="lists__sizer"></div>
+                     <div class="lists__item">
+                        <a href="{{BASE_HREF}}assets/images/mickiearta/img-gallery-list-1.jpg"  data-lightbox="our_memory" data-title=""
+                           ><img src="{{BASE_HREF}}assets/images/mickiearta/img-gallery-list-1.jpg"
+                        /></a>
+                     </div>
+                     <div class="lists__item">
+                        <a href="{{BASE_HREF}}assets/images/mickiearta/img-gallery-list-2.jpg"  data-lightbox="our_memory" data-title=""
+                           ><img src="{{BASE_HREF}}assets/images/mickiearta/img-gallery-list-2.jpg"
+                        /></a>
+                     </div>
+                     <div class="lists__item">
+                        <a href="{{BASE_HREF}}assets/images/mickiearta/img-gallery-list-3.jpg"  data-lightbox="our_memory" data-title=""
+                           ><img src="{{BASE_HREF}}assets/images/mickiearta/img-gallery-list-3.jpg"
+                        /></a>
+                     </div>
+                     <div class="lists__item">
+                        <a href="{{BASE_HREF}}assets/images/mickiearta/img-gallery-list-4.jpg"  data-lightbox="our_memory" data-title=""
+                           ><img src="{{BASE_HREF}}assets/images/mickiearta/img-gallery-list-4.jpg"
+                        /></a>
+                     </div>
+                     <div class="lists__item">
+                        <a href="{{BASE_HREF}}assets/images/mickiearta/img-gallery-list-5.jpg"  data-lightbox="our_memory" data-title=""
+                           ><img src="{{BASE_HREF}}assets/images/mickiearta/img-gallery-list-5.jpg"
+                        /></a>
+                     </div>
+                     <div class="lists__item">
+                        <a href="{{BASE_HREF}}assets/images/mickiearta/img-gallery-list-7.jpg"  data-lightbox="our_memory" data-title=""
+                           ><img src="{{BASE_HREF}}assets/images/mickiearta/img-gallery-list-7.jpg"
+                        /></a>
+                     </div>
+                     <div class="lists__item">
+                        <a href="{{BASE_HREF}}assets/images/mickiearta/img-gallery-list-6.jpg"  data-lightbox="our_memory" data-title=""
+                           ><img src="{{BASE_HREF}}assets/images/mickiearta/img-gallery-list-6.jpg"
+                        /></a>
+                     </div>
+                     <div class="lists__item">
+                        <a href="{{BASE_HREF}}assets/images/mickiearta/img-gallery-list-8.jpg" data-lightbox="our_memory" data-title=""
+                           ><img src="{{BASE_HREF}}assets/images/mickiearta/img-gallery-list-8.jpg"
+                        /></a>
+                     </div>
+                     <div class="lists__item">
+                        <div class="lists__quote">
+                           <p class="text-center">
+                              When I saw you I fell in love, and you smiled
+                              because you knew.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- /.gallery_list -->
+               </div>
+               <!-- /.gallery -->
+            </div>
+            <!-- /.container -->
+         </section>
+         <section class="section section--yspace" id="smallWishes">
+            <div class="container text-center w800 mx-auto">
+               <div class="section_text-light">
+                  <p>We're so lucky to be able to spend our wedding day with all of our friends and family; your presence is truly all the present we need. However, if you want to give a gift, we will be grateful for a small cash donation towards our home furnishings <span class="smiley"></span></p>
+                  <div class="image-center mb-4">
+                     <img src="{{BASE_HREF}}assets/images/mickiearta/img-donation-mickie-permata.jpg" alt="Donation for Good Wishes Mickie - Arta" class="img-responsive">
+                  </div>
+               </div>
+               <footer class="footer mb-4">
+                  <div class="display-flex justify-content-center">
+                     <p>Copyright &copy; 2018. Mickie &amp; Arta</p>
+                     <p>Made with love by <a href="http://owlstudio.web.id/" title="Website Custom Development" target="_blank">owlstudio.web.id</a></p>
+                  </div>
+               </footer>
+            </div>
+         </section>
+      </div><!-- /.section_wrapper -->
+   </div>
+</div><!-- /.wrapper -->
+<audio volume="0.1" autoplay loop>
+  <source src="{{BASE_HREF}}assets/audio/wedding-instrument.ogg" type="audio/ogg">
+  <source src="{{BASE_HREF}}assets/audio/wedding-instrument.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+{% endblock %}

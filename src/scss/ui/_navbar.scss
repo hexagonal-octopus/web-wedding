@@ -1,0 +1,148 @@
+.navbar {
+	box-sizing: border-box;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	transition: top 150ms ease-out, background-color 250ms ease-out;
+	display: flex;
+
+	&.nav-up {
+		top: -62px;
+		transition: top 150ms ease-out;
+		background: rgba(#16142b, 0.5);
+	}
+
+	&.nav-down {
+		background: rgba(#16142b, 0.9);
+	}
+
+	&.nav-top {
+		background: rgba(#16142b, 0);
+	}
+
+	&__wrapper {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 20;
+		background: rgba(#16142b, 0.9);
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: center;
+		display: none;
+		opacity: 0;
+		transform: scale(0.5);
+		transition: transform 150ms ease-out, opacity 150ms ease-out;
+
+		@include small {
+			display: flex;
+			flex-flow: row wrap;
+			position: static;
+			background: transparent;
+			opacity: 1;
+			width: 100%;
+			transform: scale(1);
+		}
+
+		&.is-active {
+			opacity: 1;
+			transform: scale(1);
+
+			.navbar__close-button {
+				display: block;
+			}
+		}
+	}
+
+	&__lists {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		align-items: center;
+
+		@include small {
+			margin-top: 15px;
+			flex-flow: row wrap;
+			justify-content: center;
+			align-items: flex-start;
+		}
+
+		li {
+			padding: 0 15px;
+		}
+	}
+
+	&__link {
+		color: white;
+		text-decoration: none;
+		outline: none;
+		display: block;
+		padding: 15px 0px 8px;
+		overflow: hidden;
+		position: relative;
+		font-size: rem(16);
+		line-height: rem(24);
+
+		@include small {
+			font-size: rem(14);
+			line-height: rem(24);
+		}
+
+		&:before {
+			width: 0px;
+			height: 2px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			transition: width 0ms ease-out, background-color 250ms ease-out;
+			content: '';
+		}
+
+		&:after {
+			width: 0px;
+			height: 2px;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			transition: width 250ms ease-out;
+			content: '';
+			background: #00f6ff;
+		}
+
+		&:hover:before {
+			background-color: #00f6ff;
+			width: 100%;
+			transition: width 250ms ease-out;
+		}
+
+		&:hover:after {
+			background-color: transparent;
+			width: 100%;
+			transition: all 0s ease-out;
+		}
+	}
+
+	&__menu-button {
+		@include small {
+			display: none;
+		}
+	}
+
+	&__close-button {
+		display: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		box-sizing: content-box;
+		padding: 15px;
+		z-index: 21;
+	}
+}

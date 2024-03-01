@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="format-detection" content="telephone=no">
+   <title>Hackathon 2019: hackBDGweather</title>
+   <!-- Favicons: START -->
+   <link rel="apple-touch-icon" href="./apple-touch-icon.png" sizes="180x180" />
+   <link rel="icon" href="./favicon-32x32.png" sizes="32x32" type="image/png" />
+   <link rel="icon" href="./favicon-16x16.png" sizes="16x16" type="image/png" />
+   <link rel="icon" href="./favicon.ico"/>
+   <!-- Favicons: END -->
+   <link rel="stylesheet" href="./assets/styles/vendor/normalize.css/normalize.css" />
+   
+<link rel="stylesheet" href="./assets/styles/vendor/owl.carousel/assets/owl.carousel.min.css" />
+
+   <link rel="stylesheet" href="./assets/styles/style.css" />
+   
+
+   <script src="./assets/scripts/vendor/modernizr.js" ></script>
+   <script src="./assets/scripts/vendor/jquery/jquery.min.js" ></script>
+   <script src="./assets/scripts/vendor/jquery-migrate/jquery-migrate.min.js" ></script>
+</head>
+<body>
+   
+   
+<header class="header">
+   <nav>
+      <div class="navbar">
+         <div class="navbar__wrapper" id="navbarWrapper">
+            <ul class="navbar__lists">
+               <li><a class="navbar__link" href="#beranda">Beranda</a></li>
+               <li><a class="navbar__link" href="#syarat_ketentuan">Syarat &amp; Ketentuan</a></li>
+               <li><a class="navbar__link" href="#form_registrasi">Registrasi</a></li>
+               <li><a class="navbar__link" href="#frequently_asked_questions">FAQ</a></li>
+            </ul>
+            <button type="button" class="button button--icon navbar__close-button" data-dismiss="navigation"><span class="icon icon--close"></span></button>
+         </div>
+         <button type="button" class="button button--icon navbar__menu-button ml-auto" data-toggle="navigation" data-target="#navbarWrapper"><span class="icon icon--menu"></span></button>
+      </div>
+   </nav>
+   <div id="beranda" class="header__banner display-inline-flex-column justify-content-center align-items-center">
+      <img class="img-responsive" src="./assets/images/hackbdgweather/img-logo-hackbgdweather.png" alt="Hackathon 2019: hackBDGweather">
+      <p class="header__text mt-4 mb-5">23 - 24 Januari 2019  |  BLOCK71 Bandung</p>
+      <div class="button--animate-border" id="registerToggle">
+         <div class="bar top"></div>
+         <div class="bar right delay"></div>
+         <div class="bar bottom delay"></div>
+         <div class="bar left"></div>
+         <a href="#form_registrasi" class="button button--outline button--animate-border js-button-scroll">
+            daftar sekarang
+         </a>
+      </div>
+   </div>
+</header>
+<div class="wrapper">
+   <section class="section section--image" style="background-image: url('./assets/images/hackbdgweather/img-bg-top.jpg')" data-stellar-background-ratio="0.5">
+      <div class="container">
+         <div class="block block--white block--space w600">
+            <h1 class="block__title">Hackathon 2019: hackBDGweather</h1>
+            <p class="block__text">
+               Hackathon 2019: hackBDGweather adalah kompetisi hackathon yang diadakan oleh CBN dan Fiberstar bekerjasama dengan INDO CISC bagi para developer muda berbakat yang tertarik untuk memecahkan permasalahan yang membutuhkan data cuaca melalui teknologi. Melalui kompetisi ini, para peserta akan ditantang untuk berinovasi menciptakan aplikasi yang dapat dikembangkan untuk kebutuhan masyarakat.<br><br>
+            </p>
+            <h1 class="block__title">Kriteria Peserta</h1>
+            <div class="display-flex align-items-start">
+               <img src="./assets/images/hackbdgweather/img-icon-peserta.png" alt="Peserta" class="display-block mr-3 mb-3" />
+               <ul class="lists--check">
+                  <li>Warga Negara Indonesia</li>
+                  <li>Pelajar atau profesional<br/>(diutamakan programmer &amp; data analyst)</li>
+               </ul>
+            </div>
+         </div>
+         <div class="block w660 block--offset-top ml-auto" style="top:-200px;">
+            <div class="block__container display-flex mb-4 ">
+               <div class="block--blue">
+                  <div class="block__wrapper">
+                     <div class="display-flex-column">
+                        <div class="block__icon-small">
+                           <img src="./assets/images/hackbdgweather/img-icon-pendaftaran.png" alt="Icon Pendaftaran"/>
+                        </div>
+                        <div class="block__label">Pendaftaran</div>
+                        <div class="block__info">20 Des 2018 - 9 Jan 2019</div>  
+                     </div>
+                  </div>
+               </div><!-- /.block-blue -->
+               <div class="block--blue">
+                  <div class="block__wrapper">
+                     <div class="display-flex-column">
+                        <div class="block__icon-small">
+                           <img src="./assets/images/hackbdgweather/img-icon-pengumuman.png" alt="Icon Pengumuman"/>
+                        </div>
+                        <div class="block__label">Pengumuman</div>
+                        <div class="block__info">14 Jan 2019</div>  
+                     </div>
+                  </div>
+               </div><!-- /.block-blue -->
+               <div class="block--blue">
+                  <div class="block__wrapper">
+                     <div class="display-flex-column">
+                        <div class="block__icon-small">
+                           <img src="./assets/images/hackbdgweather/img-icon-awarding.png" alt="Icon Awarding"/>
+                        </div>
+                        <div class="block__label">Hackathon &amp; Awarding</div>
+                        <div class="block__info">23 - 24 Jan 2019</div>   
+                     </div>
+                  </div>
+               </div><!-- /.block-blue -->
+               <div class="block--blue">
+                  <div class="block__wrapper">
+                     <div class="display-flex-column">
+                        <div class="block__icon-small">
+                           <img src="./assets/images/hackbdgweather/img-icon-hadiah.png" alt="Icon Hadiah"/>
+                        </div>
+                        <div class="block__label">Total Hadiah 3 Tim Terbaik</div>
+                        <div class="block__info">Rp. 18 Juta <span class="block__small">+ sertifikat</span></div>  
+                     </div>
+                  </div>
+               </div><!-- /.block-blue -->
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="section section--offset-top position-relative">
+      <div class="ornament-one" data-stellar-ratio="2"></div>
+      <div class="container">
+         <div class="display-flex align-items-end mb-5">
+            <img src="./assets/images/hackbdgweather/img-tahapan-hackaton.jpg" alt="Tahapan Hackaton Image" class="img-responsive mr-3 mb-3" />
+            <h1 class="section__title mb-3">Tahapan Hackathon</h1>
+         </div>
+         <div class="owl-carousel carousel carousel--hackaton">
+            <div class="carousel_item">
+               <div class="grid">
+                  <div class="grid_headline">Publikasi Kompetisi<br/>HackBDGweather</div>
+                  <div class="grid_subheadline"></div>
+                  <div class="grid_date">20 Desember 2018</div>
+               </div>
+            </div><!-- /.carouel_item -->
+            <div class="carousel_item">
+               <div class="grid">
+                  <div class="grid_headline">Pendaftaran Peserta dan Submit Proposal</div>
+                  <div class="grid_subheadline">Dilakukan secara online</div>
+                  <div class="grid_date">20 Desember 2018 - 9 Januari 2019</div>
+               </div>
+            </div><!-- /.carouel_item -->
+            <div class="carousel_item">
+               <div class="grid">
+                  <div class="grid_headline">Penilaian Proposal</div>
+                  <div class="grid_subheadline">Ditentukan 15 tim yang dapat lanjut ke acara HackBDGweather 2019</div>
+                  <div class="grid_date">10 Januari - 14 Januari 2019</div>
+               </div>
+            </div><!-- /.carouel_item -->
+            <div class="carousel_item">
+               <div class="grid">
+                  <div class="grid_headline">Pengumuman Peserta yang lolos ke tahap berikutnya.</div>
+                  <div class="grid_subheadline"></div>
+                  <div class="grid_date">14 Januari 2019</div>
+               </div>
+            </div><!-- /.carouel_item -->
+            <div class="carousel_item">
+               <div class="grid">
+                  <div class="grid_headline">Konfirmasi Kehadiran Peserta</div>
+                  <div class="grid_subheadline"></div>
+                  <div class="grid_date">14 - 16 Januari 2019</div>
+               </div>
+            </div><!-- /.carouel_item -->
+            <div class="carousel_item">
+               <div class="grid">
+                  <div class="grid_headline">Event Hackathon</div>
+                  <div class="grid_subheadline"></div>
+                  <div class="grid_date">23 - 24 Januari 2019</div>
+               </div>
+            </div><!-- /.carouel_item -->
+         </div>
+      </div>
+   </section>
+   <section id="syarat_ketentuan" class="section section--yspace">
+      <div class="container">
+         <h1 class="section__title">Mekanisme Kompetisi</h1>
+         <ul class="lists--2column">
+            <li>Mendaftar ke panitia selama periode 20 Desember 2018 – 9 Januari 2019 secara online pada website hackathon.cbn.id</li>
+            <li>Satu tim beranggotakan 3 orang.</li>
+            <li>Sumber data utama menggunakan API Cuaca yang disediakan penyelenggara. Peserta dapat menggunakan sumber data lain hanya sebagai pendukung.</li>
+            <li>Karya yang dilombakan belum pernah juara dalam lomba sejenis sebelumnya.</li>
+            <li>Karya merupakan karya baru yang belum pernah dipublikasikan dan memiliki manfaat.</li>
+            <li>Bersedia karyanya dikembangkan untuk kepentingan pihak penyelenggara dan Pemkot Bandung.</li>
+            <li>Tidak ada royalty untuk karya yang nantinya digunakan oleh pihak penyelenggara maupun Pemkot Bandung, tetapi copyright sepenuhnya milik developer.</li>
+            <li>Mengirimkan proposal sesuai dengan <a href="https://drive.google.com/file/d/1fKeP5OZh1Y7TJPdZS6cyphUfq2caW3Xr/view" target="_blank">template berikut</a></li>
+         </ul>
+      </div>
+   </section>
+   <section id="form_registrasi" class="section section--yspace position-relative section--image" style="background-image:url('./assets/images/hackbdgweather/img-bg-registrasi.jpg');background-position: left bottom;padding-bottom: 300px;" data-stellar-background-ratio="0.1">
+      <div class="ornament-two"></div>
+      <div class="container">
+         <div class="form__wrapper w860 ml-auto">
+            <h1 class="section__title text-center mb-4">Form Registrasi</h1>
+            <form class="form display-flex" action="https://docs.google.com/forms/d/e/1FAIpQLSeKo8J6GZUhemNcsTqckihLK1OxsVhjKKzXcXUsUzLyC6PHgg/formResponse" type="POST">
+               <div class="form-group w50p">
+                  <label for="team_name">Nama Tim <span class="required">*</span></label>
+                  <input type="text" name="entry.1258432492" class="form__control" placeholder="Masukkan Nama Tim">
+               </div>
+               <div class="form-group w50p">
+                  <label for="team_name">Email <span class="required">*</span></label>
+                  <input type="email" class="form__control" name="entry.2002643425" placeholder="Masukkan Email Tim">
+               </div>
+               <div class="form-group w50p">
+                  <label for="team_name">Nomor telepon <span class="required">*</span></label>
+                  <input type="tel" class="form__control" name="entry.1205774952" placeholder="Masukkan Nomor telepon">
+               </div>
+               <div class="form-group w50p">
+                  <label for="team_name">Nama Tim Leader <span class="required">*</span></label>
+                  <input type="text" class="form__control" name="entry.720360670" placeholder="Masukkan Nama Tim Leader">
+               </div>
+               <div class="form-group w50p">
+                  <label for="team_name">Nama Anggota Tim (1) <span class="required">*</span></label>
+                  <input type="text" class="form__control" name="entry.860241679" placeholder="Masukkan Nama Anggota Tim">
+               </div>
+               <div class="form-group w50p">
+                  <label for="team_name">Nama Anggota Tim (2) <span class="required">*</span></label>
+                  <input type="text" class="form__control" name="entry.1579044372" placeholder="Masukkan Nama Anggota Tim">
+               </div>
+               <div class="form-group w100p">
+                  <label for="industri">Industri <span class="required">*</span></label>
+                  <input id="industri" class="form__control" name="entry.1926041776" type="hidden">
+                  <div class="selectbox js-selectbox">
+                     <div class="selectbox__wrapper">
+                        <div class="selectbox__header">
+                           <span class="selectbox__name">Pilih Industri untuk idemu</span>
+                           <div class="selectbox__arrow-icon"></div>
+                        </div>
+                        <div class="selectbox__body">
+                           <ul>
+                              <li><span data-value="Pemerintahan">Pemerintahan</span></li>
+                              <li><span data-value="Pendidikan">Pendidikan</span></li>
+                              <li><span data-value="Kesehatan">Kesehatan</span></li>
+                              <li><span data-value="Transportasi">Transportasi</span></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="form-group w100p display-flex">
+                  <button type="submit" class="button button--solid mb-0" style="min-width: 250px;">Daftar</button>
+                  <a href="https://drive.google.com/file/d/1fKeP5OZh1Y7TJPdZS6cyphUfq2caW3Xr/view" target="_blank" class="button button--outline-white mb-0">Unduh Template Proposal</a>
+               </div>
+            </form>
+         </div>
+      </div>
+      <div class="ornament-three"></div>
+   </section>
+   <section id="frequently_asked_questions" class="section section--yspace section--image" style="margin-top:-200px;position: relative;
+   z-index:1;background-image: url('./assets/images/hackbdgweather/img-bg-footer.jpg');	background-position: center bottom;	background-repeat: no-repeat;	background-size: 100%;background-attachment: scroll">
+      <div class="container">
+         <h1 class="section__title text-center mb-5">Frequently Asked Questions</h1>
+         <div class="lists--grid">
+            <div class="lists__sizer">
+            <div class="lists__item">
+               <div class="lists__wrapper">
+                  <p class="lists__question">Apa syarat utama lomba?</p>
+                  <p class="lists__answer">Lomba terbuka untuk umum, tanpa memandang latar belakang dan domisili. Pendaftar merupakan tim.</p>
+               </div>
+            </div><!-- /.lists__item -->
+            <div class="lists__item">
+               <div class="lists__wrapper">
+                  <p class="lists__question">Kapan dan dimana lomba diadakan? Apakah lomba dilakukan di venue ataukah di rumah/kantor masing-masing?</p>
+                  <p class="lists__answer">Kegiatan lomba dimulai setelah Technical Meeting di venue yang sudah ditentukan.</p>
+               </div>
+            </div><!-- /.lists__item -->
+            <div class="lists__item">
+               <div class="lists__wrapper">
+                  <p class="lists__question">Apakah peserta bisa mengganti kategori aplikasi yang sudah didaftarkan sebelumnya?</p>
+                  <p class="lists__answer">Tentu bisa. Caranya mudah; hanya dengan mendaftarkan kembali tim dan mengunggah proposal sesuai dengan kategori aplikasi yang diinginkan.</p>
+               </div>
+            </div><!-- /.lists__item -->
+            <div class="lists__item">
+               <div class="lists__wrapper">
+                  <p class="lists__question">Berapa jumlah maksimal anggota tim?</p>
+                  <p class="lists__answer">Dalam satu tim harus beranggotakan 3 orang peserta, tidak bisa kurang dan tidak bisa lebih dari 3 orang.</p>
+               </div>
+            </div><!-- /.lists__item -->
+            <div class="lists__item">
+               <div class="lists__wrapper">
+                  <p class="lists__question">Apakah peserta dari luar Bandung dapat berpartisipasi dalam Hackathon 2019: hackBDGweather?</p>
+                  <p class="lists__answer">Tentu bisa. Namun, biaya akomodasi dan transportasi ditanggung sepenuhnya oleh peserta. Panitia acara hanya menyediakan konsumsi dan fasilitas selama berlangsungnya acara.</p>
+               </div>
+            </div><!-- /.lists__item -->
+            <div class="lists__item">
+               <div class="lists__wrapper">
+                  <p class="lists__question">Apakah ada biaya registrasi untuk mengikuti  Hackathon 2019: hackBDGweather?</p>
+                  <p class="lists__answer">Pendaftaran Hackathon 2019: hackBDGweather tidak dipungut biaya alias GRATIS.</p>
+               </div>
+            </div><!-- /.lists__item -->
+            <div class="lists__item">
+               <div class="lists__wrapper">
+                  <p class="lists__question">Apakah Hackathon 2019: hackBDGweather hanya bisa diikuti oleh mahasiswa dan profesional muda saja?</p>
+                  <p class="lists__answer">Tidak. Hackathon 2019: hackBDGweather bisa diikuti oleh semua kalangan, baik pelajar, mahasiswa S1/S2, maupun para profesional muda.</p>
+               </div>
+            </div><!-- /.lists__item -->
+            <div class="lists__item">
+               <div class="lists__wrapper">
+                  <p class="lists__question">Setelah mendaftar apa yang perlu pendaftar lakukan kemudian?</p>
+                  <p class="lists__answer">Mulai mempersiapkan diri untuk mengerjakan aplikasi.</p>
+               </div>
+            </div><!-- /.lists__item -->
+            <div class="lists__item">
+               <div class="lists__wrapper">
+                  <p class="lists__question">Apakah semua peserta wajib mengikuti technical meeting dan workshop?</p>
+                  <p class="lists__answer">Semua peserta WAJIB mengikuti technical meeting dan workshop yang akan berlangsung pada tanggal 23 Januari 2019.</p>
+               </div>
+            </div><!-- /.lists__item -->
+            <div class="lists__item">
+               <div class="lists__wrapper">
+                  <p class="lists__question">Apa saja persyaratan karya yang dapat diikutsertakan dalam Hackathon 2019: hackBDGweather?</p>
+                  <p class="lists__answer">Karya yang dilombakan harus merupakan ide baru yang belum pernah dipublikasikan atau juara dalam lomba sejenis sebelumnya. Dalam technical meeting akan dijelaskan spesifikasi teknis sistem atau tools yang harus dipenuhi dalam membuat karya.</p>
+               </div>
+            </div><!-- /.lists__item -->
+            <div class="lists__item">
+               <div class="lists__wrapper">
+                  <p class="lists__question">Bagaimana bentuk karya yang akan dipresentasikan saat sesi penjurian?</p>
+                  <p class="lists__answer">Karya yang dipresentasikan berbentuk aplikasi (versi web atau mobile).</p>
+               </div>
+            </div><!-- /.lists__item -->
+            <div class="lists__item">
+               <div class="lists__wrapper">
+                  <p class="lists__question">Bagaimana caranya mendapatkan token API Cuaca?</p>
+                  <p class="lists__answer">Bila diambil dengan mendaftarkan diri di link berikut. Pada link tersebut terdapat pula dokumentasi penggunaan API. Link: http://45.126.132.55:4444/</p>
+               </div>
+            </div><!-- /.lists__item -->
+            <div class="lists__item">
+               <div class="lists__wrapper">
+                  <p class="lists__question">Adakah nomor kontak yang bisa dihubungi jika ada pertanyaan lebih lanjut terkait kompetisi ini?.</p>
+                  <p class="lists__answer">Anda bisa menghubungi nomor +62 87827118552 a.n Shelly Yolanda</p>
+               </div>
+            </div><!-- /.lists__item -->
+         </div>
+      </div>
+      <footer class="footer">
+         <div class="footer__wrapper">
+            <div class="block block--white">
+               <div class="display-flex justify-content-center">
+                  <div class="footer__column">
+                     <span class="footer__title">Presented by:</span>
+                     <div class="footer__logos">
+                        <img class="footer__logo" src="./assets/images/hackbdgweather/img-logo-cbn.jpg" alt="CBN Internet">
+                        <img class="footer__logo" src="./assets/images/hackbdgweather/img-logo-fiberstar.jpg" alt="Fiberstar">
+                        <img class="footer__logo" src="./assets/images/hackbdgweather/img-logo-indocisc.jpg" alt="Indocisc">
+                     </div>
+                  </div>
+                  <div class="footer__column">
+                     <span class="footer__title">Supported by:</span>
+                     <div class="footer__logos">
+                        <img class="footer__logo" src="./assets/images/hackbdgweather/img-logo-diskominfo.jpg" alt="Diskominfo Jabar">
+                        <img class="footer__logo" src="./assets/images/hackbdgweather/img-logo-diskominfo-bdg.jpg" alt="Diskominfo Bandung">
+                        <img class="footer__logo" src="./assets/images/hackbdgweather/img-logo-cbn-cloud.jpg" alt="CBN Cloud">
+                        <img class="footer__logo" src="./assets/images/hackbdgweather/img-logo-mmp.jpg" alt="MMP">
+                        <img class="footer__logo" src="./assets/images/hackbdgweather/img-logo-8villages.jpg" alt="8 Villages">
+                        <img class="footer__logo" src="./assets/images/hackbdgweather/img-logo-99ers.jpg" alt="99ers">
+                        <img class="footer__logo" src="./assets/images/hackbdgweather/img-logo-block71.jpg" alt="BLOCK71">
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="footer__copy">Copyright &copy; 2018 HackBDGweather. All rights reserved.</div>
+         </div><!-- /.footer__wrapper -->
+      </footer>
+   </section>
+</div>
+
+   
+<script src="./assets/scripts/vendor/jquery.nicescroll/jquery.nicescroll.min.js" ></script>
+<script src="./assets/scripts/vendor/owl.carousel/owl.carousel.min.js" ></script>
+<script src="./assets/scripts/vendor/masonry-layout/masonry.pkgd.js" ></script>
+<script src="./assets/scripts/vendor/waypoints/lib/jquery.waypoints.js" ></script>
+<script src="./assets/scripts/vendor/jquery.stellar/jquery.stellar.js" ></script>
+
+   <script type="text/javascript" src="./assets/scripts/main.js"></script>
+   
+</body>
+</html>

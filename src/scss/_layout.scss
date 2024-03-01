@@ -1,0 +1,108 @@
+.container {
+	width: 100%;
+	padding: 0 15px;
+	box-sizing: border-box;
+
+	@include medium {
+		margin: 0 auto;
+		width: 750px;
+	}
+
+	@include large {
+		width: 960px;
+	}
+
+	@include xlarge {
+		width: 1170px;
+		padding: 0px 15px;
+	}
+}
+
+.row {
+	display: flex;
+	flex-flow: row wrap;
+	margin-left: -15px;
+	margin-right: -15px;
+	width: auto;
+
+	@include large {
+		margin-left: -15px;
+		margin-right: -15px;
+		width: auto;
+	}
+}
+
+.col-1of2 {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 15px;
+	margin-bottom: 24px;
+	position: relative;
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	@include large {
+		width: 50%;
+		margin-bottom: 0;
+	}
+}
+
+.col-1of3 {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 15px;
+	margin-bottom: 24px;
+	position: relative;
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	@include large {
+		width: 33.333%;
+		margin-bottom: 0;
+	}
+}
+
+.col-2of3 {
+	@extend .col-1of3;
+	@include large {
+		width: 66.666%;
+	}
+}
+
+.col,
+.col-3of3 {
+	@extend .col-1of3;
+	@include large {
+		width: 100%;
+	}
+}
+
+.col-1of4 {
+	@extend .col-1of3;
+	@include large {
+		width: 25%;
+	}
+}
+
+.col-2of4 {
+	@extend .col-1of3;
+	@include large {
+		width: 50%;
+	}
+}
+
+.col-3of4 {
+	@extend .col-1of3;
+	@include large {
+		width: 75%;
+	}
+}
+
+.col-4of4 {
+	@extend .col-1of3;
+	@include large {
+		width: 100%;
+	}
+}

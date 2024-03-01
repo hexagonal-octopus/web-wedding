@@ -1,0 +1,125 @@
+.basketview {
+	&__total {
+		padding: 20px;
+	}
+
+	&__label {
+		text-align: right;
+		margin: 0;
+		margin-bottom: 4px;
+		font-size: rem(14);
+		color: #909090;
+	}
+
+	&__footer {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+
+		@include xlarge {
+			display: block;
+		}
+	}
+
+	&__total,
+	&__actions {
+		width: 35%;
+		padding: 10px 15px;
+		box-sizing: border-box;
+
+		@include xlarge {
+			width: 100%;
+			padding: 15px;
+		}
+	}
+
+	&__total {
+		order: 2;
+		width: 65%;
+		@include xlarge {
+			width: 100%;
+		}
+	}
+
+	&__actions {
+		order: 1;
+		text-align: left;
+		@include xlarge {
+			text-align: center;
+
+			.button {
+				margin-bottom: 0;
+			}
+
+			p {
+				margin: 0;
+				margin: 16px 0;
+			}
+		}
+	}
+
+	&__price-total {
+		text-align: right;
+		margin: 0;
+		margin-bottom: 8px;
+		font-size: rem(18);
+		line-height: rem(23);
+		font-family: $font-family-headline;
+		font-weight: normal;
+	}
+
+	.ornament {
+		display: none;
+		@include xlarge {
+			display: block;
+		}
+	}
+
+	.button--link {
+		display: none;
+		@include xlarge {
+			display: block;
+			text-align: center;
+		}
+	}
+
+	.button--icon-text {
+		display: inline-block;
+		border-radius: 50%;
+		width: 42px;
+		height: 42px;
+		padding: 0;
+		text-align: center;
+		margin-bottom: 0;
+
+		@include xlarge {
+			display: flex;
+			flex-flow: row wrap;
+			align-items: center;
+			width: auto;
+			height: 50px;
+			border-radius: 20px;
+			margin-bottom: 18px;
+		}
+
+		.button__icon {
+			display: inline-block;
+			line-height: 42px;
+			margin-right: 0;
+			height: 42px;
+			position: relative;
+			top: -1px;
+			left: -1px;
+			@include xlarge {
+				margin-right: 8px;
+			}
+		}
+
+		.button__text {
+			display: none;
+			@include xlarge {
+				display: block;
+			}
+		}
+	}
+}

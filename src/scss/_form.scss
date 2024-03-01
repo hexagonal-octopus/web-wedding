@@ -1,0 +1,46 @@
+.form__wrapper {
+	box-sizing: border-box;
+	padding: 40px 8px;
+	border: 1px solid #044894;
+	position: relative;
+	z-index: 4;
+
+	@include large {
+		padding: 40px;
+	}
+}
+
+.form-group {
+	margin-bottom: 28px;
+}
+
+.form {
+	label {
+		color: #999;
+	}
+
+	span.required {
+		color: #226bbc;
+	}
+
+	&__control {
+		display: block;
+		border: 0;
+		box-shadow: 0;
+		font-size: rem(15);
+		line-height: rem(24);
+		padding: 13px;
+		width: 100%;
+		box-sizing: border-box;
+		margin: 8px 0;
+		border: 1px solid transparent;
+
+		&:focus {
+			border: 1px solid #226bbc;
+		}
+
+		&[type='file'] {
+			padding: 13px 0;
+		}
+	}
+}

@@ -1,0 +1,1013 @@
+// ***********************************
+// HELPERS
+// ***********************************
+@import 'mixins';
+@import 'functions';
+@import 'variables';
+@import 'keyframes';
+
+// BASE HTML
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background-color: #fff;
+	color: black;
+	font-family: $brandontext-regular;
+}
+
+.header {
+	width: 100%;
+	height: 100%;
+}
+
+.navbar {
+	z-index: 50;
+
+	&_wrapper {
+		width: 100%;
+		padding: 0 15px;
+		box-sizing: border-box;
+		margin: 0 auto;
+
+		@include medium {
+			width: 750px;
+			padding: 0;
+		}
+
+		@include large {
+			width: 960px;
+		}
+
+		@include xlarge {
+			width: 1170px;
+		}
+
+		@include xxlarge {
+			width: 1400px;
+		}
+	}
+
+	&.nav-up {
+		top: -120px;
+		transition: top 150ms ease-out;
+		background: rgba(#ffffff, 0.5);
+		border-bottom: 0;
+
+		.navbar_logo img {
+			height: 40px;
+		}
+	}
+
+	&.nav-down {
+		background: rgba(#ffffff, 1);
+		box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+
+		.navbar_logo img {
+			height: 40px;
+		}
+	}
+
+	&.nav-top {
+		background: rgba(#ffffff, 0);
+		box-shadow: none;
+
+		.navbar_logo img {
+			height: 40px;
+
+			@include large {
+				height: 90px;
+			}
+		}
+	}
+
+	&_logo img {
+		height: 40px;
+		display: inline-block;
+		padding: 15px 0;
+		transition: height 250ms ease-out;
+		transform-origin: 50% 50%;
+		@include large {
+			height: 90px;
+		}
+	}
+
+	&_logo a {
+		line-height: 0;
+		display: block;
+	}
+
+	&_menu {
+		display: none;
+		position: fixed;
+		z-index: 100;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(255, 255, 255, 0.9);
+
+		@include medium {
+			display: block;
+			position: static;
+			background: none;
+		}
+
+		&.is-active {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.navbar_lists {
+				display: block;
+				margin: 0;
+				padding: 0;
+			}
+
+			.navbar__close-button {
+				display: block;
+				position: absolute;
+				top: 20px;
+				right: 15px;
+				z-index: 100;
+			}
+		}
+
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			display: flex;
+			flex-flow: row wrap;
+			align-content: flex-end;
+		}
+
+		li {
+			padding: 0 15px;
+			line-height: 0;
+		}
+
+		a {
+			display: inline-block;
+			font-family: $brandontext-bold;
+			font-size: rem(16);
+			font-weight: normal;
+			line-height: rem(40);
+			color: black;
+			text-decoration: none;
+			padding: 22px 0 8px;
+		}
+	}
+
+	&__link {
+		&:after {
+			background: #ed1a3b;
+			transition: width 250ms ease-out;
+		}
+
+		&:hover:before {
+			background-color: #ed1a3b;
+			transition: width 250ms ease-out;
+		}
+	}
+}
+
+.leaves {
+	display: none;
+	@include medium {
+		display: block;
+	}
+	&_item {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		background-repeat: no-repeat;
+		background-position: center center;
+		z-index: 1;
+
+		&--01 {
+			background-image: url('../images/mickiearta/img-leaf-2.png');
+			width: 281px;
+			height: 144px;
+			transform: translate(-600px, -300px);
+		}
+
+		&--02 {
+			background-image: url('../images/mickiearta/img-leaf-3.png');
+			width: 149px;
+			height: 103px;
+			transform: translate(-300px, -200px);
+		}
+
+		&--03 {
+			background-image: url('../images/mickiearta/img-leaf-4.png');
+			width: 196px;
+			height: 120px;
+			transform: translate(300px, -300px);
+		}
+
+		&--top {
+			@include medium {
+				background-image: url('../images/mickiearta/img-leaf-1.png');
+				width: 279px;
+				height: 201px;
+				top: 100%;
+				transform: translate(110px, -50px);
+				z-index: 10;
+			}
+
+			@include large {
+				transform: translate(160px, -50px);
+			}
+
+			@include xlarge {
+				transform: translate(300px, -50px);
+			}
+		}
+
+		&--left01 {
+			background-image: url('../images/mickiearta/img-leaf-3.png');
+			width: 149px;
+			height: 103px;
+			top: 50%;
+			left: 0;
+			transform: translate(0px, 0%);
+			z-index: 10;
+		}
+
+		&--left02 {
+			background-image: url('../images/mickiearta/img-leaf-4.png');
+			width: 196px;
+			height: 120px;
+			top: 30%;
+			left: 100px;
+			transform: translate(0px, 0px);
+			z-index: 10;
+		}
+
+		&--left03 {
+			background-image: url('../images/mickiearta/img-leaf-2.png');
+			width: 281px;
+			height: 144px;
+			top: 20%;
+			left: 0;
+			transform: translate(0px, 0px);
+			z-index: 10;
+		}
+
+		&--left04 {
+			background-image: url('../images/mickiearta/img-leaf-4.png');
+			width: 196px;
+			height: 120px;
+			top: 80%;
+			left: 100px;
+			transform: translate(0px, 0px);
+			z-index: 10;
+		}
+
+		&--right01 {
+			background-image: url('../images/mickiearta/img-leaf-4.png');
+			width: 196px;
+			height: 120px;
+			top: 50%;
+			left: 90%;
+			transform: translate(0px, 0px);
+			z-index: 10;
+		}
+
+		&--right02 {
+			background-image: url('../images/mickiearta/img-leaf-2.png');
+			width: 281px;
+			height: 144px;
+			top: 55%;
+			left: 90%;
+			transform: translate(0px, 0px);
+			z-index: 10;
+		}
+
+		&--right03 {
+			background-image: url('../images/mickiearta/img-leaf-3.png');
+			width: 149px;
+			height: 103px;
+			top: 60%;
+			left: 90%;
+			transform: translate(0px, 0px);
+			z-index: 10;
+		}
+	}
+}
+
+.slides {
+	height: 100%;
+	width: 100%;
+	position: relative;
+
+	&_wrapper {
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+
+	&_item {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: right top;
+
+		@include xlarge {
+			background-size: auto 100%;
+		}
+
+		&-1 {
+			background-image: url('../images/mickiearta/img-slides-1-mobile.jpg');
+			animation: fade 24s infinite;
+			@include small {
+				background-image: url('../images/mickiearta/img-slides-1.jpg');
+			}
+		}
+
+		&-2 {
+			background-image: url('../images/mickiearta/img-slides-2-mobile.jpg');
+			animation: fade2 24s infinite;
+			@include small {
+				background-image: url('../images/mickiearta/img-slides-2.jpg');
+			}
+		}
+
+		&-3 {
+			background-image: url('../images/mickiearta/img-slides-3-mobile.jpg');
+			animation: fade3 24s infinite;
+			@include small {
+				background-image: url('../images/mickiearta/img-slides-3.jpg');
+			}
+		}
+
+		&-4 {
+			background-image: url('../images/mickiearta/img-slides-4-mobile.jpg');
+			animation: fade4 24s infinite;
+			@include small {
+				background-image: url('../images/mickiearta/img-slides-4.jpg');
+			}
+		}
+
+		&-5 {
+			background-image: url('../images/mickiearta/img-slides-5-mobile.jpg');
+			animation: fade5 24s infinite;
+			@include small {
+				background-image: url('../images/mickiearta/img-slides-5.jpg');
+			}
+		}
+	}
+
+	&_layer {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		z-index: 5;
+
+		.container {
+			width: 100%;
+
+			@include medium {
+				width: 750px;
+			}
+
+			@include large {
+				width: 960px;
+			}
+
+			@include xlarge {
+				width: 1170px;
+			}
+
+			@include xxlarge {
+				width: 1400px;
+			}
+		}
+	}
+
+	&_text {
+		width: 100%;
+		box-sizing: border-box;
+		padding: 50px 25px;
+		background: rgba(255, 255, 255, 0.8);
+
+		position: relative;
+		margin-top: 260px;
+
+		@include medium {
+			width: 85%;
+			padding: 0;
+			padding-left: 96px;
+			background: transparent;
+		}
+
+		@include xlarge {
+			margin-top: 0;
+			width: 40%;
+		}
+
+		h1 {
+			font-family: $yeseva;
+			font-size: rem(42);
+			line-height: rem(50);
+			margin: 0;
+			margin-bottom: 24px;
+			font-weight: normal;
+			@include large {
+				font-size: rem(64);
+				line-height: rem(72);
+			}
+		}
+
+		p {
+			font-size: rem(18);
+			line-height: rem(30);
+			margin: 0;
+			margin-bottom: 24px;
+			color: #222;
+		}
+
+		strong {
+			font-family: $brandontext-bold;
+		}
+	}
+
+	&_label {
+		display: none;
+		@include medium {
+			display: block;
+			font-size: rem(14);
+			line-height: 1;
+			white-space: nowrap;
+			text-transform: uppercase;
+			color: #909090;
+			position: absolute;
+			left: -46px;
+			bottom: 0;
+			transform: rotate(-90deg);
+
+			&:before {
+				content: '';
+				width: 100px;
+				height: 1px;
+				background: #909090;
+				position: absolute;
+				left: 100%;
+				margin-left: 15px;
+				top: 7px;
+			}
+		}
+	}
+}
+
+.wrapper {
+	background-image: url('../images/mickiearta/img-bg-footer-mobile.jpg');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: 100%;
+	background-color: #242837;
+
+	@include medium {
+		background-position: right bottom;
+		background-image: url('../images/mickiearta/img-bg-footer-2.jpg');
+		background-position: 90% bottom;
+		background-size: auto;
+		background-attachment: fixed;
+	}
+
+	&__content {
+		padding-top: 80px;
+		padding-bottom: 80px;
+		box-sizing: content-box;
+		margin-bottom: 750px;
+		background-color: #ffffff;
+		position: relative;
+		z-index: 6;
+		@include small {
+			background-color: #f9f9f9;
+			background-image: linear-gradient(#ffffff, #f9f9f9);
+			margin-bottom: 800px;
+		}
+
+		&:before {
+			@include small {
+				width: 200%;
+				height: 500px;
+				content: '';
+				background-color: #f9f9f9;
+				transform: rotate(-4deg) translate(-50%, -33px);
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				z-index: -1;
+			}
+
+			@include xlarge {
+				transform: rotate(-4deg) translate(-50%, -42px);
+			}
+
+			@include xxlarge {
+				transform: rotate(-4deg) translate(-50%, -64px);
+			}
+		}
+	}
+}
+
+.section {
+	&__wrapper {
+		width: 100%;
+		margin: 0 auto;
+		overflow: hidden;
+		background: white;
+		// box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+
+		@include medium {
+			width: 750px;
+		}
+
+		@include large {
+			width: 960px;
+		}
+
+		@include xlarge {
+			width: 1170px;
+		}
+
+		@include xxlarge {
+			width: 1400px;
+		}
+	}
+
+	&--diagonal-red {
+		position: relative;
+		z-index: 2;
+		margin-top: -200px;
+		@include xlarge {
+			margin-top: -340px;
+		}
+
+		&:before {
+			width: 200%;
+			height: 500px;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: rotate(-10deg) translate(-50%, 0);
+			transform-origin: 50% 50%;
+			content: '';
+			background-color: #b71c1c;
+			z-index: -1;
+
+			@include medium {
+				transform: rotate(-20deg) translate(-50%, -77%);
+			}
+		}
+	}
+
+	&--diagonal-grey {
+		position: relative;
+		z-index: 1;
+
+		&:before {
+			width: 200%;
+			content: '';
+			height: 600px;
+			position: absolute;
+			top: 3%;
+			left: 50%;
+			transform-origin: center center;
+			transform: rotate(10deg) translate(-50%, 0px);
+			background-color: #242837;
+			background-image: url('../images/mickiearta/img-bg-dark.jpg');
+			background-position: 20% top;
+			background-repeat: no-repeat;
+			z-index: -1;
+
+			@include medium {
+				top: 15%;
+				transform: rotate(20deg) translate(-50%, 0px);
+			}
+
+			@include large {
+				top: 50%;
+				transform: rotate(20deg) translate(-50%, -190px);
+			}
+		}
+
+		.section_headline {
+			color: white !important;
+		}
+	}
+
+	&--foldtop {
+		background-image: url('../images/mickiearta/img-bg-fold-top.jpg');
+		background-position: left bottom;
+		background-repeat: no-repeat;
+		background-size: auto;
+		padding-bottom: 380px;
+
+		@include medium {
+			background-size: 100%;
+			background-position: center bottom;
+		}
+	}
+
+	&--foldbottom {
+		background-image: url('../images/mickiearta/img-fold-bottom.jpg');
+		background-position: center top;
+		background-repeat: no-repeat;
+		margin-top: -110px;
+		background-size: auto;
+		padding-top: 380px;
+		@include medium {
+			background-size: 100%;
+		}
+
+		@include xlarge {
+			margin-top: -40px;
+		}
+	}
+
+	&_label {
+		font-size: rem(14);
+		text-transform: uppercase;
+		line-height: 1;
+		white-space: nowrap;
+	}
+
+	&_feature {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		margin-bottom: 30px;
+		padding-top: 30px;
+	}
+
+	&_icon {
+		width: 90px;
+		height: 90px;
+		margin-right: 12px;
+		line-height: 0;
+		background-position: center center;
+		background-repeat: no-repeat;
+
+		&--church {
+			background-image: url('../images/mickiearta/img-icon-matrimony.png');
+		}
+
+		&--party {
+			background-image: url('../images/mickiearta/img-icon-reception.png');
+		}
+	}
+
+	&_jumboline {
+		font-size: rem(48);
+		line-height: rem(60);
+		font-family: $yeseva;
+		font-weight: normal;
+		margin: 0;
+		margin-bottom: 12px;
+	}
+
+	&_subline {
+		font-size: rem(13);
+		text-transform: uppercase;
+		line-height: rem(24);
+		margin: 0;
+		color: #909090;
+		font-weight: normal;
+		margin-bottom: 8px;
+		padding: 0 40px;
+
+		@include medium {
+			padding: 0;
+		}
+	}
+
+	&_lead,
+	&_headline {
+		font-size: rem(24);
+		line-height: rem(30);
+		font-family: $yeseva;
+		font-weight: normal;
+		margin: 0;
+		margin-bottom: 12px;
+	}
+
+	&_sublead {
+		font-size: rem(22);
+		line-height: rem(30);
+		font-family: $brandontext-light;
+		margin: 0;
+	}
+
+	&_text {
+		p {
+			font-size: rem(16);
+			line-height: rem(24);
+			color: #202020;
+			margin: 0;
+			margin-bottom: 24px;
+		}
+	}
+
+	&_text-light {
+		p {
+			font-size: rem(20);
+			font-family: $brandontext-light;
+			line-height: rem(36);
+			margin: 0;
+			margin-bottom: 48px;
+		}
+
+		.smiley {
+			display: inline-block;
+			width: 25px;
+			height: 36px;
+			line-height: 0;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-image: url('../images/mickiearta/img-smiley.jpg');
+			vertical-align: bottom;
+			margin-left: 8px;
+		}
+	}
+
+	&_image {
+		&--medium-right {
+			text-align: center;
+			@include medium {
+				text-align: right;
+			}
+			@include large {
+				text-align: left;
+			}
+		}
+	}
+}
+
+.count {
+	display: flex;
+	margin: 30px 0;
+	padding-bottom: 30px;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: flex-start;
+
+	&_unit {
+		width: 100px;
+		box-sizing: content-box;
+		padding: 8px 16px;
+		text-align: center;
+		font-family: $yeseva;
+		font-size: rem(48);
+		line-height: rem(56);
+		position: relative;
+		font-weight: normal;
+		margin-bottom: 45px;
+		@include medium {
+			margin-bottom: 0;
+		}
+
+		&:before {
+			content: attr(data-unit);
+			font-size: rem(16);
+			line-height: rem(24);
+			text-align: center;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			font-family: $brandontext-regular;
+		}
+	}
+}
+
+.images {
+	&--stacked {
+		position: relative;
+		height: 380px;
+	}
+
+	&_item {
+		width: 100%;
+		background-color: #999;
+		box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.2);
+		line-height: 0;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -253px;
+
+		@include small {
+			width: 506px;
+		}
+
+		img {
+			width: 100%;
+			display: inline-block;
+			line-height: 0;
+		}
+
+		&:nth-of-type(1) {
+			transform: translate(0, 0);
+			margin: 0;
+			position: static;
+
+			@include small {
+				margin-left: 15px;
+			}
+
+			@include xlarge {
+				margin-left: 70px;
+			}
+		}
+
+		&:nth-of-type(2) {
+			transform: translate(200px, 150px);
+		}
+	}
+
+	&_ornament {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-125px, 230px);
+		@include small {
+			transform: translate(-40px, 230px);
+		}
+		@include large {
+			transform: translate(200px, 230px);
+		}
+	}
+}
+
+.button {
+	font-size: rem(18);
+	line-height: rem(24);
+	white-space: nowrap;
+	padding: 13px 40px;
+
+	&--gold {
+		font-family: $yeseva;
+		background-color: #d4af37;
+		color: black;
+		position: relative;
+
+		&:before {
+			content: '';
+			border: 1px solid #d4af37;
+			width: calc(100% + 6px);
+			height: calc(100% + 6px);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) scale(1.2);
+			opacity: 0;
+			transition: all 150ms ease-out;
+		}
+
+		&:hover:before {
+			opacity: 1;
+			transform: translate(-50%, -50%) scale(1);
+		}
+	}
+
+	&_offset-center {
+		margin: 0 auto;
+
+		@include medium {
+			margin: 0;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-100%, 100px);
+		}
+		@include large {
+			transform: translate(-50%, 100px);
+		}
+	}
+
+	&--icon {
+		padding: 0;
+		width: 30px;
+		height: 30px;
+		.icon {
+			width: 30px;
+			height: 30px;
+			display: inline-block;
+			line-height: 30px;
+			margin: 0;
+			background-size: 30px 30px;
+			background-repeat: no-repeat;
+			background-position: center center;
+
+			&--menu {
+				background-image: url('../images/mickiearta/menu-circular-button.png');
+			}
+
+			&--close {
+				background-image: url('../images/mickiearta/close-circular-button.png');
+			}
+		}
+	}
+}
+
+.gallery {
+	width: 100%;
+	margin: 0 auto;
+
+	@include small {
+		width: 70%;
+	}
+
+	@include medium {
+		width: 90%;
+	}
+}
+
+.lists--grid {
+	.lists__item {
+		padding: 0px 5px 10px;
+
+		a {
+			line-height: 0;
+			display: block;
+		}
+
+		img {
+			display: inline-block;
+			max-width: 100%;
+			width: 100%;
+			@include small {
+				width: auto;
+			}
+		}
+	}
+
+	.lists__quote {
+		font-size: rem(24);
+		line-height: rem(32);
+		padding: 20px;
+		color: #909090;
+		font-family: $brandontext-light;
+	}
+}
+
+.footer {
+	p {
+		font-size: rem(16);
+		line-height: rem(24);
+		padding: 0px 24px;
+		border-right: 1px solid #e1e1e1;
+		margin: 0;
+		margin-bottom: 16px;
+	}
+
+	p:last-child {
+		border-right: 1px solid transparent;
+	}
+
+	a {
+		text-decoration: none;
+		color: #f50057;
+		transition: color 250ms ease-out;
+	}
+
+	a:hover {
+		text-decoration: none;
+		color: #880e4f;
+	}
+}
+
+.lb-cancel {
+	background: url(../images/vendor/lightbox2/images/loading.gif) no-repeat;
+}
+
+.lb-nav a.lb-prev {
+	background: url(../images/vendor/lightbox2/images/prev.png) left 48%
+		no-repeat;
+}
+
+.lb-nav a.lb-next {
+	background: url(../images/vendor/lightbox2/images/next.png) right 48%
+		no-repeat;
+}
+
+.lb-data .lb-close {
+	background: url(../images/vendor/lightbox2/images/close.png) top right
+		no-repeat;
+}

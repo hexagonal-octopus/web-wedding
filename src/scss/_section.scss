@@ -1,0 +1,100 @@
+.wrapper {
+	width: 100%;
+	overflow: hidden;
+}
+
+.section {
+	&--image {
+		background-repeat: no-repeat;
+		background-position: center top;
+		@include large {
+			background-attachment: fixed;
+		}
+	}
+
+	&--yspace {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	&__title {
+		margin: 0;
+		font-size: rem(24);
+		line-height: rem(32);
+		font-family: $abc-modern-bold;
+	}
+
+	&--offset-top {
+		@include large {
+			margin-top: -260px;
+		}
+	}
+}
+
+.ornament-one {
+	display: none;
+	@include large {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 449px;
+		height: 437px;
+		background-image: url('../images/hackbdgweather/img-vector-1.png');
+		background-repeat: no-repeat;
+		background-position: center center;
+		transform: translate(150px, -50px);
+		z-index: 3;
+	}
+
+	@include xlarge {
+		transform: translate(80px, -50px);
+	}
+
+	// @include xxlarge {
+	// 	transform: translate(-160px, -50px);
+	// }
+}
+
+.ornament-two {
+	display: none;
+	@include xlarge {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 506px;
+		height: 492px;
+		background-image: url('../images/hackbdgweather/img-vector-2.png');
+		background-repeat: no-repeat;
+		background-position: center center;
+		transform: translate(-180px, 0px);
+		z-index: 3;
+	}
+}
+
+.ornament-three {
+	display: none;
+
+	@include medium {
+		display: block;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 358px;
+		height: 286px;
+		background-image: url('../images/hackbdgweather/img-vector-3.png');
+		background-repeat: no-repeat;
+		background-position: center center;
+		transform: translate(150px, -180px);
+		z-index: 3;
+	}
+
+	@include large {
+		transform: translate(150px, -100px);
+	}
+
+	@include xlarge {
+		transform: translate(100px, -150px);
+	}
+}

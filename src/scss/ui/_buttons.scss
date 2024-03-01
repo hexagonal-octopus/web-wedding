@@ -1,0 +1,165 @@
+// ***********************************
+// BUTTONS
+// ***********************************
+
+button {
+	font-size: 100%; /* Corrects font size not being inherited in all browsers */
+	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+}
+
+.button {
+	border: 0;
+	box-shadow: none;
+	outline: none;
+	cursor: pointer;
+	text-decoration: none;
+	display: inline-block;
+	color: #333;
+	background-color: #ddd;
+	margin-bottom: 16px;
+	box-sizing: border-box;
+	text-align: center;
+	transition: all 250ms ease-out;
+	width: 100%;
+
+	&:disabled,
+	&[disabled] {
+		cursor: not-allowed;
+	}
+
+	@include medium {
+		width: auto;
+		margin: 0;
+		margin-right: 8px;
+	}
+}
+
+.button--icon {
+	background: transparent;
+	width: 24px;
+	height: 24px;
+	padding: 0;
+	margin: 0;
+	box-sizing: content-box;
+	padding: 15px;
+
+	.icon {
+		width: 24px;
+		height: 24px;
+		background-position: center center;
+		background-size: 24px auto;
+		background-repeat: no-repeat;
+		display: block;
+
+		&--menu {
+			background-image: url('../images/hackbdgweather/img-menu.png');
+		}
+
+		&--close {
+			background-image: url('../images/hackbdgweather/img-cancel.png');
+		}
+	}
+}
+
+.button--solid {
+	background: #3949ab;
+	text-transform: uppercase;
+	color: white;
+	font-size: rem(14);
+	font-family: $poppins-bold;
+	line-height: rem(20);
+	padding: 13px 26px;
+	display: inline-block;
+}
+
+.button--outline {
+	background: transparent;
+	font-size: rem(14);
+	font-family: $poppins-bold;
+	line-height: rem(20);
+	text-transform: uppercase;
+	border: 2px solid #00f6ff;
+	padding: 13px 26px;
+	color: white;
+	display: inline-block;
+	&:hover {
+		background-color: #00f6ff;
+		color: black;
+	}
+}
+
+.button--outline-white {
+	@extend .button--outline;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+
+	&:hover {
+		background-color: transparent;
+		color: white;
+		border: 1px solid rgba(255, 255, 255, 0.8);
+	}
+}
+
+.button--animate-border {
+	//must width:200px;
+	//height: 50px;
+	width: 200px;
+	position: relative;
+	overflow: hidden;
+	line-height: 0;
+
+	.button {
+		margin-bottom: 0;
+		border: 2px solid rgba(255, 255, 255, 0.1);
+		display: block;
+		line-height: rem(20);
+	}
+
+	.bar {
+		width: 50px;
+		height: 2px;
+		position: absolute;
+		background: #00f6ff;
+		animation-duration: 800ms;
+		animation-fill-mode: both;
+		animation-iteration-count: infinite;
+	}
+
+	.bar.delay {
+		-webkit-animation-delay: 400ms;
+		animation-delay: 400ms;
+	}
+
+	.top {
+		left: 24px;
+		top: 0px;
+		animation-name: h-move;
+	}
+
+	.bottom {
+		left: -2px;
+		bottom: 0px;
+		animation-name: h-move;
+	}
+
+	.left {
+		transform: rotate(90deg);
+		top: 24px;
+		left: -24px;
+		animation-name: v-move;
+	}
+
+	.right {
+		transform: rotate(90deg);
+		top: 24px;
+		right: -24px;
+		animation-name: v-move;
+	}
+}
+
+// #registerToggle {
+// 	position: fixed;
+// 	top: 0;
+// 	right: 0;
+// 	z-index: 11;
+// }

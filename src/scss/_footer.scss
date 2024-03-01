@@ -1,0 +1,53 @@
+.footer {
+	&__copy {
+		padding: 24px 0 120px;
+		text-align: center;
+		font-size: rem(14);
+		color: rgba(white, 0.5);
+	}
+
+	&__title {
+		font-size: rem(14);
+		font-family: $poppins-medium;
+		color: black;
+	}
+
+	&__column {
+		margin-bottom: 24px;
+		text-align: center;
+
+		@include large {
+			margin-bottom: 0;
+			padding: 0 24px;
+			text-align: left;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__logos {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+
+		@include large {
+			justify-content: flex-start;
+		}
+	}
+
+	&__logo {
+		margin: 8px;
+		display: inline-block;
+
+		@include large {
+			margin: 0;
+			margin-right: 16px;
+			margin-top: 8px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}

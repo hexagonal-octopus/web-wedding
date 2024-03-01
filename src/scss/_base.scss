@@ -1,0 +1,20 @@
+// ***********************************
+// BASE
+// ***********************************
+html,
+body {
+	height: 100%;
+}
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: $poppins-regular;
+	background-color: #16142b;
+	color: #fff;
+	font-size: rem(14);
+	line-height: rem(24);
+}
